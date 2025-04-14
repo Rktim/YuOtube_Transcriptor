@@ -2,7 +2,7 @@
 
 Extract and download subtitles from any YouTube video with just a link!
 
-![App Screenshot](./assets/app_preview.jpeg)
+
 
 <p align="center">
   <a href="https://yuotubetranscriptor.streamlit.app/">
