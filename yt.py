@@ -71,6 +71,5 @@ if youtube_url:
         st.error("❌ Invalid YouTube link. Please check and try again.")
 st.markdown("---")
 st.markdown(
-    "Made with ❤️ by [**Raktim**](https://github.com/Rktim) &nbsp;&nbsp;&bull;&nbsp;&nbsp;"
-    "📌 [GitHub Repo](https://github.com/Rktim)"
+    "Made with ❤️ by [**Raktim**](https://github.com/Rktim)
 )
