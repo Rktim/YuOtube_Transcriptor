@@ -11,17 +11,6 @@ Extract and download subtitles from any YouTube video with just a link!
   </a>
 </p>
 
-<p align="center">
-  <a href="https://github.com/Rktim/YuOtube_Transcriptor/stargazers">
-    <img src="https://img.shields.io/github/stars/Rktim/YuOtube_Transcriptor?style=for-the-badge&color=F10086" alt="GitHub stars">
-  </a>
-  <a href="https://github.com/Rktim/YuOtube_Transcriptor/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/Rktim/YuOtube_Transcriptor?style=for-the-badge&color=00C896" alt="License">
-  </a>
-  <a href="https://github.com/Rktim/YuOtube_Transcriptor">
-    <img src="https://img.shields.io/github/languages/top/Rktim/YuOtube_Transcriptor?style=for-the-badge&color=7A77FF" alt="Top Language">
-  </a>
-</p>
 
 ---
 
