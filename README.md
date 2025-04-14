@@ -5,11 +5,7 @@ Extract and download subtitles from any YouTube video with just a link!
 
 
 
-<p align="center">
-  <a href="https://yuotubetranscriptor.streamlit.app/">
-    <img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Try it " />
-  </a>
-</p>
+[![Try It](https://img.shields.io/badge/BG%20%26%20Format%20Here-orange?style=for-the-badge)](https://yuotubetranscriptor.streamlit.app/)
 
 
 ---
