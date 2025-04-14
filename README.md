@@ -48,8 +48,7 @@ Extract and download subtitles from any YouTube video with just a link!
 # YouTube Transcript Extractor
 
 
-(![WhatsApp Image 2025-04-15 at 00 36 26_6d20ba41](https://github.com/user-attachments/assets/a845867d-ceb2-4669-8a7c-c1a2c3eeec44)
-)
+![WhatsApp Image 2025-04-15 at 00 36 26_6d20ba41](https://github.com/user-attachments/assets/a845867d-ceb2-4669-8a7c-c1a2c3eeec44)
 
 ---
 
