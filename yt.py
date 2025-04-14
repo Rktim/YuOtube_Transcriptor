@@ -69,5 +69,8 @@ if youtube_url:
                     st.error(error)
     else:
         st.error("❌ Invalid YouTube link. Please check and try again.")
-##st.markdown("---")
-#st.markdown("Hope you find this tool useful! 🚀 If you like it, consider sharing it with your friends. \n\n💡 Created with ❤️ by [Raktim](https://github.com/Rktim)")
+st.markdown("---")
+st.markdown(
+    "Made with ❤️ by [**Raktim**](https://github.com/Rktim) &nbsp;&nbsp;&bull;&nbsp;&nbsp;"
+    "📌 [GitHub Repo](https://github.com/Rktim)"
+)
