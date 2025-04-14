@@ -44,7 +44,10 @@ Extract and download subtitles from any YouTube video with just a link!
 
 > Real-time UI snapshot:
 
-![YuOtube Transcriptor Screenshot](./assets/app_preview.jpeg)
+# YouTube Transcript Extractor
+
+
+[![App Preview](https://i.ytimg.com/vi/5RlOQuHoihY/hqdefault.jpg)](https://youtu.be/5RlOQuHoihY?si=X5aFOmIdG7PgXFoF)
 
 ---
 
