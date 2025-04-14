@@ -8,69 +8,64 @@ from youtube_transcript_api._errors import (
     TooManyRequests,
 )
 
-# Streamlit page config
 st.set_page_config(
-    page_title="YouTube Transcript Extractor",
+    page_title="YouTube Transcriptor",
     page_icon="🎬",
-    layout="wide"
+    layout="centered"
 )
 
-st.title("🎬 YouTube Transcriptor")
-st.markdown("Extract and download transcripts from YouTube videos. Paste your link and get started!")
+st.title("🎬 YouTube Transcript Extractor")
+st.markdown("Paste a YouTube link to extract and download its transcript.")
 
-# Extract YouTube Video ID
-def extract_video_id(link: str) -> str | None:
-    pattern = r"(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:watch\?v=|embed\/|v\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})"
-    match = re.search(pattern, link)
+# Extract video ID
+def extract_video_id(url):
+    pattern = r"(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})"
+    match = re.search(pattern, url)
     return match.group(1) if match else None
 
-# Get transcript
-def get_transcript(video_id: str) -> tuple[str | None, str | None]:
+# Get transcript using preferred method
+def fetch_transcript(video_id):
     try:
         transcripts = YouTubeTranscriptApi.list_transcripts(video_id)
-        transcript = transcripts.find_transcript(["en"])
-        text = " ".join([entry["text"] for entry in transcript.fetch()])
-        return text, None
+        transcript = transcripts.find_transcript(['en'])
+        full_text = " ".join([entry['text'] for entry in transcript.fetch()])
+        return full_text, None
     except TranscriptsDisabled:
-        return None, "❌ Transcripts are disabled for this video."
+        return None, "🚫 Transcripts are disabled for this video."
     except VideoUnavailable:
-        return None, "❌ Video is unavailable."
+        return None, "🚫 This video is unavailable."
     except NoTranscriptFound:
-        return None, "❌ No transcript found in available languages."
+        return None, "⚠️ No transcript found for this video in English."
     except TooManyRequests:
-        return None, "🚫 Rate limited by YouTube. Try again later."
+        return None, "🚫 Rate limit exceeded. Try again later."
     except Exception as e:
-        return None, f"⚠️ Unexpected error: {str(e)}"
+        return None, f"❌ Unexpected error: {str(e)}"
 
-# YouTube Link Input
-youtube_link = st.text_input("Enter a YouTube link:", placeholder="https://www.youtube.com/watch?v=...")
+# Input
+youtube_url = st.text_input("📎 Paste YouTube video URL", placeholder="https://www.youtube.com/watch?v=...")
 
-if youtube_link:
-    video_id = extract_video_id(youtube_link)
+if youtube_url:
+    video_id = extract_video_id(youtube_url)
 
     if video_id:
         st.video(f"https://www.youtube.com/watch?v={video_id}")
-        st.success(f"✅ Video ID extracted: `{video_id}`")
 
         if st.button("📄 Get Transcript"):
             with st.spinner("Fetching transcript..."):
-                transcript, error = get_transcript(video_id)
+                transcript, error = fetch_transcript(video_id)
 
                 if transcript:
-                    st.subheader("📝 Transcript")
-                    st.text_area("", transcript, height=300)
+                    st.success("✅ Transcript fetched successfully!")
 
-                    file_name = f"{video_id}_transcript.txt"
+                    st.text_area("Transcript:", transcript, height=300)
+
                     st.download_button(
                         label="⬇️ Download Transcript",
                         data=transcript,
-                        file_name=file_name,
+                        file_name=f"{video_id}_transcript.txt",
                         mime="text/plain"
                     )
                 else:
                     st.error(error)
     else:
-        st.error("❌ Invalid YouTube URL. Please enter a correct link.")
-
-st.markdown("---")
-st.markdown("Built with ❤️ by [Raktim](https://github.com/Rktim)")
+        st.error("❌ Invalid YouTube link. Please check and try again.")
