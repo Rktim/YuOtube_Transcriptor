@@ -6,7 +6,6 @@ Extract and download subtitles from any YouTube video with just a link!
 
 
 [![Try It](https://img.shields.io/badge/Try%20Here-orange?style=for-the-badge)](https://yuotubetranscriptor.streamlit.app/)
-]
 
 ---
 
