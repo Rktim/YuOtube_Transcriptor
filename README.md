@@ -75,7 +75,7 @@ If you find this project useful, consider giving it a ⭐ and sharing it!
 ---
 
 ## 📝 License
-This project is licensed under the MIT License — use it, fork it, build on it.  
+This project is licensed under the MIT  [LICENSE](LICENSE) — use it, fork it, build on it.  
 Copyright (c) 2024 Raktim
 
 ---
