@@ -14,7 +14,7 @@ st.set_page_config(
     layout="centered"
 )
 
-st.title("🎬 YouTube Transcript Extractor")
+st.title("🎬 YouTube Transcripxtractor")
 st.markdown("Paste a YouTube link to extract and download its transcript.")
 
 # Extract video ID
