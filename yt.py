@@ -1,12 +1,7 @@
 import re
 import streamlit as st
 from youtube_transcript_api import YouTubeTranscriptApi
-from youtube_transcript_api._errors import (
-    TranscriptsDisabled,
-    VideoUnavailable,
-    NoTranscriptFound,
-    TooManyRequests,
-)
+from youtube_transcript_api._errors import *
 
 st.set_page_config(
     page_title="YouTube Transcriptor",
