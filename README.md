@@ -1,6 +1,5 @@
 
-# 🎬 YouTube Transcripxtractor
-
+# 🎬 YouTube Transcriptor
 Extract and download subtitles from any YouTube video with just a link!
 
 
